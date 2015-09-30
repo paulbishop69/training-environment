@@ -1,3 +1,6 @@
+#Testing this out
+
+
 Given(/^i have logged in$/) do
   $data = {}
   $data['user_name'] = 'User' + Time.new().to_i.to_s + '@example.org' # Create a random user name
