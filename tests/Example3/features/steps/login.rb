@@ -1,5 +1,4 @@
-#Testing this out
-
+#Generate a new login
 
 Given(/^i have logged in$/) do
   $data = {}
@@ -8,17 +7,24 @@ Given(/^i have logged in$/) do
 
   rest_post_call('http://localhost:4567/add_user', $data)
 
+#Launch webpage
+
   visit('http://localhost:4567')
+
+#Complete user details with generated login and sign in
 
   fill_in('username', :with => $data['user_name'])
   fill_in('password', :with => $data['user_password'])
   click_button('Sign in')
 
+#Confirm Log in page has been reached and navigate to details screen
   expect(page.body).to match('Logged in')
 
   find('html/body/div[2]/ul/li[2]/a').click
   sleep 3
 end
+
+#Complete all fields and submit form
 
 When(/^i enter my details$/) do
 
@@ -39,13 +45,10 @@ sleep 4
 
 end
 
+#Confirm name details are shown on completion screen
 
 Then(/^my details are displayed$/) do
-  #page.should have_content?('John')
+  expect(page).to have_text 'John'
   expect(page).to have_text 'Smith'
-  #page.has_content 'Bath'
-  #page.should have_content?('34 Smith Street Bath BA1 1QL')
-  #page.should have_content('I am a catnip')
-  #expect(page).have_content'Joe'
-  #assert_match('I drive a banana',page.body,'No banana')
+
 end
