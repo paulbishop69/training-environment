@@ -1,5 +1,7 @@
-Feature: Check expected infill fields are present in page body
+Feature: Expected infill fields are present in page body
 
+Background:
+Given I have navigated to the user details screen
 
 Scenario: Confirm a Forename field is displayed
 
