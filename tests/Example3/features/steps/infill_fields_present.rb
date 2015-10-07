@@ -7,8 +7,8 @@ Given(/^i am viewing the details screen$/) do
 end
 
 When(/^i check the screen contains and item of "([^"]*)"$/) do |arg1|
-#expect(page.body).to have_content(arg1)
-  expect(find(:xpath, 'html/body/div[1]/form/label[1]')).to have_content(arg1)
+expect(page.body).to have_content(arg1)
+  #expect(find(:xpath, 'html/body/div[1]/form/label[1]')).to have_content(arg1)
 end
 #
 #Then(/^i can see a label of "([^"]*)"$/) do |arg1|
