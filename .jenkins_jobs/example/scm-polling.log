@@ -1,9 +1,5 @@
-Started on Sep 30, 2015 1:25:40 PM
+Started on Nov 20, 2015 3:30:17 PM
 Using strategy: Default
 [poll] Last Built Revision: Revision d7fd36a06590d0b43d94e910ee75b2bade71af84 (refs/remotes/origin/master)
  > git --version # timeout=10
  > git -c core.askpass=true ls-remote -h https://github.com/LR-Training/training-environment # timeout=10
-Found 2 remote heads on https://github.com/LR-Training/training-environment
-[poll] Latest remote head revision on refs/heads/master is: d7fd36a06590d0b43d94e910ee75b2bade71af84 - already built by 4
-Done. Took 5.7 sec
-No changes
